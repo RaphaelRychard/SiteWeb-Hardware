@@ -1,0 +1,220 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap');
+
+@font-face {
+    font-family: 'NightHuntDemo';
+    src: url(../font/NightHuntDemo.otf) format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+:root {
+    --cor-0: #EEEDED;
+    --cor-1: #636A71;
+    --cor-2: #1e2326;
+    --cor-3: #1E7668;
+    --cor-4: #196154;
+
+    --cor-Sub-item: #F2F0F5;
+    --cor-topbar-link: #1E7668;
+
+    --font-padrao: 'Montserrat', sans-serif, Arial;
+    --font-destaque: 'NightHuntDemo',  sans-serif, Arial;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--font-padrao);
+    font-size: 1em;
+
+    background: #DFDAE7 url('../Image/fundo.png');
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: #196154;
+} 
+
+/* *** HEADER ***
+-----------------
+*/
+
+header {
+    background: linear-gradient(to top, var(--cor-2), #121516);
+    box-shadow: 0px 3px 8px 2px #0000001f;
+    text-transform: uppercase;
+
+    padding-top: 60px;
+    padding-bottom: 120px;
+    
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+header > h1 {
+    font-family: var(--font-destaque);
+    font-size: clamp(2em, 2.5em + 4vw, 5em);
+    letter-spacing: 10px;
+}
+
+header > h1 > a {
+    text-decoration: none;
+    color: var(--cor-0);
+}
+
+header > h1 > a:hover {
+    color: var(--cor-3);
+    cursor: pointer;
+}
+
+header > h3 {
+    letter-spacing: 2px;
+    color: #808080;
+    
+    font-size: clamp(1em, 1em + 1vw, 1.3em);
+    font-family: var(--font-destaque);
+}
+
+header h3:hover {
+    cursor: default;
+}
+
+
+nav#menu {
+   
+}
+
+nav#menu ul {
+    
+}
+nav#np ul li {}
+nav#np ul li a {}
+
+
+
+
+/* *** MENU (Small / Medium) ***
+--------------------------------
+*/
+@media (max-width: 921.98px) {
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        padding: 2%;
+        box-sizing: border-box;
+    }
+
+
+    nav#menu .current-item {
+        background-color: #121516;
+        box-sizing: border-box;
+        border-radius: 2px;
+
+        padding: 20px;
+        width: 70px;
+        height: 70px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav#menu #menu-item > ul {
+        list-style: none;
+        display: none;
+        font-weight: bold;
+    }
+
+    nav#menu #menu-item:hover ul {
+        display: inline-block;
+        position: fixed;
+        background-color: #121516;
+
+        padding: 15px;
+        margin-top: 5px;
+
+        border-radius: 2px;
+        box-sizing: border-box;
+
+        width: 96%;
+    }
+
+    nav#menu ul li {}
+
+    nav#menu ul li a {
+        padding: 10px 5px;
+        display: block;
+    }
+
+}
+
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+    width: 100%;
+    min-width: 180px;
+    max-width: 280px;
+
+    font-size: 0.95em;
+    font-weight: bold;
+}
+
+input label.search, input#search {
+    outline: none;
+    border: none;
+}
+
+form label.search {
+    background-color: var(--cor-4);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.274);
+    color: white;
+
+    padding: 8px 20px;
+    margin-left: -4.2px;
+
+    outline: none;
+    cursor: pointer;
+
+    
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+
+    font-weight: bold;
+    font-size: 1em;
+
+}
+
+form label.search:hover {
+    background-color: var(--cor-3);
+    color: var(--cor-0);
+}
+
+form input#search {
+    width: 100%;
+    margin-left: 20px;  
+
+    padding: 7px;
+    border: 1px solid #dddddd;
+    letter-spacing: 1px;
+}
+
