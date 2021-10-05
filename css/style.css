@@ -276,6 +276,7 @@ main {
     color: var(--cor-2);
 }
 main article {}
+
 main article h1 {
     font-size: 1.5em;
 }
