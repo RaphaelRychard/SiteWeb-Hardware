@@ -215,7 +215,7 @@ form {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 10px 15px;
+
 }
 
 input label.search, input#search {
